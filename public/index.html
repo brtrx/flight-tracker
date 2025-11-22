@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Single Flight Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+  </script>
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header>
+    <h1>✈️ Single Flight Tracker</h1>
+
+    <div class="controls">
+      <label>
+        ICAO24 (hex):
+        <input id="icao24" placeholder="e.g. 3c4b26" />
+      </label>
+
+      <span class="or">or</span>
+
+      <label>
+        Callsign:
+        <input id="callsign" placeholder="e.g. DLH2AB" />
+      </label>
+
+      <button id="startBtn">Start tracking</button>
+      <button id="stopBtn" disabled>Stop</button>
+    </div>
+
+    <div id="status">Enter an ICAO24 or callsign, then Start.</div>
+  </header>
+
+  <main>
+    <div id="map"></div>
+
+    <aside id="info">
+      <h2>Flight info</h2>
+      <div id="infoBody">No data yet.</div>
+    </aside>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
